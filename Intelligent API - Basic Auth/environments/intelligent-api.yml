@@ -1,0 +1,8 @@
+name: intelligent-api
+variables:
+  - name: baseUrl
+    value: https://api.intelligent-api.com/
+  - secret: true
+    name: basicAuthClientId
+  - secret: true
+    name: basicAuthClientSecret

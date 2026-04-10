@@ -1,0 +1,22 @@
+info:
+  name: 01 Expenses
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}v1/document/expenses"
+  headers:
+    - name: X-Correlation-Id
+      value: dfe8e127-14aa-42e5-8397-118ebd4594b3
+      disabled: true
+  auth:
+    type: basic
+    username: "{{basicAuthClientId}}"
+    password: "{{basicAuthClientSecret}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

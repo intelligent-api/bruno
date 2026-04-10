@@ -1,0 +1,28 @@
+info:
+  name: 02 Detect Language
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}v1/language/detect"
+  headers:
+    - name: X-Correlation-Id
+      value: dfe8e127-14aa-42e5-8397-118ebd4594b3
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+          "text": "Il était une fois un fermier nommé Henry qui plantait des citrouilles pour s'amuser, mais ses citrouilles ne poussaient pas, elles se ratatinaient et mouraient. Henry devait comprendre ce qui n'allait pas, alors il demanda à son ami George. George comprit qu'il ne pourrait aider Henry que s'il voyait réellement ce qu'il avait fait, alors il prit rendez-vous pour aller à la ferme d'Henry et voir ses citrouilles. Lorsque le moment convenu approcha, George se rendit à la ferme d'Henry et alla voir la plantation de citrouilles, pour découvrir qu'Henry avait essayé de faire pousser les graines dans de l'eau seulement. George expliqua à Henry que cela ne marcherait jamais, et Henry écouta George et planta de nouvelles graines de citrouilles dans la boue, les arrosa et elles poussèrent. There once was a farmer named Henry who planted pumpkins for fun, but his pumkins didn't grow instead they shrivelled up and died. Henry had to figure out what was wrong, so he asked his friend George. George realised he could only help Henry if he actually saw what he had done, so he arranged a time to go over to Henry's farm and check out his pumpkins. When the arranged time approached, George went over to Henry's farm and went to see the pumpkin plantation, only to find that Henry had been trying to grow the seeds in just water. George explained to Henry that would never work, and Henry listened to George and planted new pumkin seeds in mud, watered them and they grew."
+      }
+  auth:
+    type: basic
+    username: "{{basicAuthClientId}}"
+    password: "{{basicAuthClientSecret}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

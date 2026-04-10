@@ -1,0 +1,30 @@
+info:
+  name: 02 Request Token
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{baseUrl}}v1/token"
+  body:
+    type: json
+    data: |-
+      {
+          "client_id": "{{clientId}}",
+          "client_secret": "{{clientSecret}}",
+          "grant_type": "client_credentials",
+          "scope": "client.balance document.expense document.text document.identity language.detect language.translate pii.detect pii.redact scraper.markdown text.sentiment text.summarize"
+      }
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        var jsonData = res.getBody();
+        bru.setEnvVar("token", jsonData.access_token);
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

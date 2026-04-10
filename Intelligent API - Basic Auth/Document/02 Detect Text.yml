@@ -1,0 +1,22 @@
+info:
+  name: 02 Detect Text
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}v1/document/text"
+  headers:
+    - name: X-Correlation-Id
+      value: dfe8e127-14aa-42e5-8397-118ebd4594b3
+      disabled: true
+  auth:
+    type: basic
+    username: "{{basicAuthClientId}}"
+    password: "{{basicAuthClientSecret}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

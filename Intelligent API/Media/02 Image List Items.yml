@@ -1,0 +1,27 @@
+info:
+  name: 02 Image List Items
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}v1/image/list"
+  headers:
+    - name: X-Correlation-Id
+      value: dfe8e127-14aa-42e5-8397-118ebd4594b3
+      disabled: true
+  body:
+    type: file
+    data:
+      - filePath: /Users/heatheshbhandari/Downloads/grocery4.jpeg
+        contentType: image/jpeg
+        selected: true
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

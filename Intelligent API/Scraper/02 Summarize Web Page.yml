@@ -1,0 +1,23 @@
+info:
+  name: 02 Summarize Web Page
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}v1/scraper/summarize"
+  body:
+    type: json
+    data: |-
+      {
+          "url": "https://www.bbc.com/news/articles/c70dr45dj1lo"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

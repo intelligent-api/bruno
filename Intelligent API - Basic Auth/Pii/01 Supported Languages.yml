@@ -1,0 +1,18 @@
+info:
+  name: 01 Supported Languages
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{baseUrl}}v1/pii/supportedlanguages"
+  auth:
+    type: basic
+    username: "{{basicAuthClientId}}"
+    password: "{{basicAuthClientSecret}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

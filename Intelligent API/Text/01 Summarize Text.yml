@@ -1,0 +1,27 @@
+info:
+  name: 01 Summarize Text
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}v1/text/summarize"
+  headers:
+    - name: X-Correlation-Id
+      value: dfe8e127-14aa-42e5-8397-118ebd4594b3
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+          "text": "Hello, my name is Johnathan Doe and I am a software developer that lives in Cape Town, South Africa. People normally call me John because it's easier then saying Johnathan. For fun I write code, exercise and run. I also like hiking and exploring new locations. Please call me on 0825556789 if you need assistance."
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,7 @@
+info:
+  name: Media
+  type: folder
+  seq: 8
+
+request:
+  auth: inherit

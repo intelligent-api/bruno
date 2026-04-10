@@ -1,0 +1,28 @@
+info:
+  name: 01 Transcribe Audio
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}v1/speech/transcribe"
+  headers:
+    - name: X-Correlation-Id
+      value: dfe8e127-14aa-42e5-8397-118ebd4594b3
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - /Users/heatheshbhandari/Downloads/listofitems.ogg
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

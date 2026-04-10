@@ -1,0 +1,23 @@
+info:
+  name: 01 Markdown Web Page
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}v1/scraper/markdown"
+  body:
+    type: json
+    data: |-
+      {
+          "url": "https://fullcycle.tech"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
