@@ -1,0 +1,27 @@
+info:
+  name: 04 Text Calorie Count
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{baseUrl}}v1/text/calories"
+  headers:
+    - name: X-Correlation-Id
+      value: dfe8e127-14aa-42e5-8397-118ebd4594b3
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+          "text": "Belgium waffle with syrup"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
