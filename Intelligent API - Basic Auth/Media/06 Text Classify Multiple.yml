@@ -1,0 +1,31 @@
+info:
+  name: 06 Text Classify Multiple
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{baseUrl}}v1/text/classify/multiple"
+  body:
+    type: json
+    data: |-
+      {
+        "items": ["McDonalds Quarter Pounder deluxe",
+      "McDonalds Regular Coke",
+      "Gym Membership",
+      "Beef Steak",
+      "Multi-vitamin",
+      "Petrol",
+      "Car tires"],
+        "classifications": ["Food & Dining", "Transport", "Shopping", "Utilities", "Entertainment", "Health", "Education", "Other"]
+      }
+  auth:
+    type: basic
+    username: "{{basicAuthClientId}}"
+    password: "{{basicAuthClientSecret}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,25 @@
+info:
+  name: 07 Text Expenses
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{baseUrl}}v1/text/expenses"
+  body:
+    type: json
+    data: |-
+      {
+        "text": "59.99 for bananas",
+        "classifications": ["Food & Dining", "Transport", "Shopping", "Utilities", "Entertainment", "Health", "Education", "Other"]
+      }
+  auth:
+    type: basic
+    username: "{{basicAuthClientId}}"
+    password: "{{basicAuthClientSecret}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
