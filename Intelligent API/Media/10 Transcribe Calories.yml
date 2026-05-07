@@ -1,0 +1,24 @@
+info:
+  name: 10 Transcribe Calories
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{baseUrl}}v1/speech/calories"
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - audiofile.opus
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,26 @@
+info:
+  name: 08 Text Todos
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{baseUrl}}v1/text/todo"
+  body:
+    type: json
+    data: |-
+      {
+        "usersDate": "05/05/2026",
+        "usersDay": "Tuesday",
+        "usersTime": "4:13 PM",
+        "text": "Pick up the car tomorrow evening"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

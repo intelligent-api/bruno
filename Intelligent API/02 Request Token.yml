@@ -13,7 +13,7 @@ http:
           "client_id": "{{clientId}}",
           "client_secret": "{{clientSecret}}",
           "grant_type": "client_credentials",
-          "scope": "client.balance document.expense document.text document.identity language.detect language.translate pii.detect pii.redact scraper.markdown text.sentiment text.summarize speech.transcribe image.list image.calories text.calories text.classify"
+          "scope": "client.balance document.expense document.text document.identity language.detect language.translate pii.detect pii.redact scraper.markdown text.sentiment text.summarize speech.transcribe image.list image.calories text.calories text.classify text.expenses text.todos"
       }
 
 runtime:
