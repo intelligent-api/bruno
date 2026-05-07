@@ -5,13 +5,10 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}v1/speech/expenses?classifications=Food & Dining,Transport,Shopping,Utilities,Entertainment,Health,Education,Other"
+  url: "{{baseUrl}}v1/speech/expenses?classifications=Food%20%26%20Dining,Transport,Shopping,Utilities,Entertainment,Health,Education,Other"
   params:
     - name: classifications
-      value: "Food "
-      type: query
-    - name: " Dining,Transport,Shopping,Utilities,Entertainment,Health,Education,Other"
-      value: ""
+      value: Food%20%26%20Dining,Transport,Shopping,Utilities,Entertainment,Health,Education,Other
       type: query
   body:
     type: multipart-form
